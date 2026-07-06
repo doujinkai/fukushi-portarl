@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // 👇ここがポイント（GASのURL）
-        const GAS_URL = "ここにURLを貼る";
+        const GAS_URL = "https://script.google.com/macros/s/AKfycbz16moF5NxY_O5MRkOExwqhGrpkzW-werngCjPsR8s0lmAKJMl4JnQ-rSLtwMDOWLM-/exec";
 
         fetch(GAS_URL, {
             method: "POST",
