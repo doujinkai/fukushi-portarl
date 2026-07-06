@@ -6,9 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     form.addEventListener("submit", function (e) {
 
-        e.preventDefault(); // ページリロード防止
+        e.preventDefault();
 
-        // フォームデータ取得
         const formData = {
             name: form.name.value.trim(),
             kana: form.kana.value.trim(),
@@ -19,28 +18,41 @@ document.addEventListener("DOMContentLoaded", function () {
             message: form.message.value.trim()
         };
 
-        // 簡易チェック（必須項目）
         if (!formData.name || !formData.tel || !formData.facility || !formData.message) {
             alert("必須項目を入力してください");
             return;
         }
 
-        // 確認表示（現段階はテスト）
-        const confirmText =
-            "以下の内容で送信準備します\\n\\n" +
-            "氏名：" + formData.name + "\\n" +
-            "電話：" + formData.tel + "\\n" +
-            "施設：" + formData.facility + "\\n\\n" +
-            "送信してよろしいですか？";
-
-        if (!confirm(confirmText)) {
+        if (!confirm("この内容で送信しますか？")) {
             return;
         }
 
-        // 今はまだ送信しない（次でGAS接続）
-        console.log("送信データ:", formData);
+        // 👇ここがポイント（GASのURL）
+        const GAS_URL = "ここにURLを貼る";
 
-        alert("送信準備完了（次のステップでメール送信を実装します）");
+        fetch(GAS_URL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(res => res.text())
+        .then(data => {
+
+            alert("送信が完了しました");
+
+            form.reset();
+
+            console.log("GASレスポンス:", data);
+
+        })
+        .catch(error => {
+
+            console.error(error);
+            alert("送信に失敗しました");
+
+        });
 
     });
 
