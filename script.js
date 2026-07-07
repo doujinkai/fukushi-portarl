@@ -76,9 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (result === "success") {
 
-                alert("送信しました");
-
-                form.reset();
+                window.location.href = "thanks.html";
 
             } else {
 
