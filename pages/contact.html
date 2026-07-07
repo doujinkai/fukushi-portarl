@@ -4,95 +4,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>入居相談フォーム</title>
 
     <link rel="stylesheet" href="../style.css">
+
 </head>
+
 
 <body>
 
+
 <div class="portal-container">
 
-    <header>
 
-        <div class="back-link">
-            <a href="../index.html">← ホームページへ戻る</a>
-        </div>
+<header>
 
-        <h1>入居相談フォーム</h1>
-
-        <p class="sub-title">必要事項をご入力ください</p>
-
-    </header>
+    <div class="back-link">
+        <a href="../index.html">
+            ← ホームページへ戻る
+        </a>
+    </div>
 
 
-    <main>
+    <h1>
+        入居相談フォーム
+    </h1>
 
-        <section class="form-section">
 
-            <form id="contactForm">
+    <p class="sub-title">
+        ご相談・お問い合わせ内容をご入力ください
+    </p>
 
-                <!-- 氏名 -->
-                <div class="form-group">
-                    <label>氏名（必須）</label>
-                    <input type="text" name="name" required>
-                </div>
 
-                <!-- フリガナ -->
-                <div class="form-group">
-                    <label>フリガナ</label>
-                    <input type="text" name="kana">
-                </div>
+</header>
 
-                <!-- 郵便番号 -->
-                <div class="form-group">
-                    <label>郵便番号</label>
-                    <input type="text" name="zipcode" placeholder="123-4567">
-                </div>
 
-                <!-- 電話 -->
-                <div class="form-group">
-                    <label>電話番号（必須）</label>
-                    <input type="tel" name="tel" required>
-                </div>
 
-                <!-- メール -->
-                <div class="form-group">
-                    <label>メールアドレス</label>
-                    <input type="email" name="email">
-                </div>
+<main>
 
-                <!-- 施設 -->
-                <div class="form-group">
-                    <label>希望施設（必須）</label>
-                    <select name="facility" required>
-                        <option value="">選択してください</option>
-                        <option value="太陽の家">太陽の家</option>
-                        <option value="みづほの里">みづほの里</option>
-                        <option value="グループホーム">グループホーム</option>
-                    </select>
-                </div>
 
-                <!-- 内容 -->
-                <div class="form-group">
-                    <label>お問い合わせ内容（必須）</label>
-                    <textarea name="message" rows="6" required></textarea>
-                </div>
+<section class="form-section">
 
-                <!-- 送信 -->
-                <button type="submit" class="start-button">
-                    送信する
-                </button>
 
-            </form>
+<form id="contactForm">
 
-        </section>
 
-    </main>
+
+<!-- 氏名 -->
+
+<div class="form-group">
+
+<label>
+氏名（必須）
+</label>
+
+<input 
+type="text"
+name="name"
+required>
 
 </div>
 
+
+
+
+<!-- フリガナ -->
+
+<div class="form-group">
+
+<label>
+フリガナ
+</label>
+
+<input 
+type="text"
+name="kana">
+
+</div>
+
+
+
+
+<!-- 郵便番号 -->
+
+<div class="form-group">
+
+<label>
+郵便番号
+</label>
+
+<input 
+type="text"
+name="zipcode"
+placeholder="例：3730036">
+
+</div>
+
+
+
+
+<!-- 電話 -->
+
+<div class="form-group">
+
+<label>
+電話番号（必須）
+</label>
+
+<input 
+type="tel"
+name="tel"
+required>
+
+</div>
+
+
+
+
+<!-- メール -->
+
+<div class="form-group">
+
+<label>
+メールアドレス
+</label>
+
+<input 
+type="email"
+name="email">
+
+</div>
+
+
+
+
+<!-- 施設選択 -->
+
+<div class="form-group">
+
+<label>
+ご相談内容・希望施設（必須）
+</label>
+
+
+<select name="facility" required>
+
+
+<option value="">
+選択してください
+</option>
+
+
+<option value="太陽の家">
+太陽の家
+</option>
+
+
+<option value="大泉園">
+大泉園
+</option>
+
+
+<option value="鶴生田園">
+鶴生田園
+</option>
+
+
+<option value="みづほの里">
+みづほの里
+</option>
+
+
+<option value="西小泉愛">
+西小泉愛
+</option>
+
+
+<option value="ゆう愛">
+ゆう愛
+</option>
+
+
+<option value="ぐるっぺ絆">
+ぐるっぺ絆
+</option>
+
+
+<option value="ふれあい太田">
+ふれあい太田
+</option>
+
+
+<option value="ケアハウスたかちほ">
+ケアハウスたかちほ
+</option>
+
+
+<option value="サンライズさかいの">
+サンライズさかいの
+</option>
+
+
+<option value="未定、相談したい等">
+未定、相談したい等
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+<!-- 内容 -->
+
+<div class="form-group">
+
+
+<label>
+お問い合わせ内容（必須）
+</label>
+
+
+<textarea 
+name="message"
+rows="6"
+required></textarea>
+
+
+</div>
+
+
+
+
+
+<!-- 送信 -->
+
+<button 
+type="submit"
+class="start-button">
+
+送信する
+
+</button>
+
+
+
+</form>
+
+
+
+</section>
+
+
+</main>
+
+
+
+</div>
+
+
+
 <script src="../script.js"></script>
+
 
 </body>
 
