@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log("GAS結果:", result);
 
 
-            if (result === "success") {
+            if (result.trim() === "success") {
 
                 window.location.href = "thanks.html";
 
